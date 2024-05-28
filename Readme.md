@@ -2,6 +2,7 @@
 
 * Студент: [Владислав](https://up.htmlacademy.ru/htmlcss/40/user/1114907).
 * Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+* Сайт: [Проект Седона](https://vladislavkoronchik.github.io/1114907-sedona-40/).
 
 ---
 
