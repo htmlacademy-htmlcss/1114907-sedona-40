@@ -270,21 +270,15 @@ body {
 
 .subscribe {
   text-align: center;
-  color: var(--color-on-surface);
-  background-color: var(--color-surface-20);
-  background-image:url("../images/background-subscribe.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.subscribe {
-  text-align: center;
 }
 
 .subscribe--on-surface {
-  background-color: var(--color-surface);
   color: var(--color-on-surface);
+  background-color: var(--color-surface-20);
+  background-image: url("../images/background-subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .subscribe__title {
