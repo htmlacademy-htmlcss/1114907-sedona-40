@@ -192,9 +192,6 @@ body {
   height: 64px;
 }
 
-.navbar__brand-logo {
-}
-
 .navbar__menu,
 .navbar__user-menu {
   margin: 0;
@@ -210,9 +207,6 @@ body {
   display: flex;
   align-items: center;
   list-style: none;
-}
-
-.menu__item {
 }
 
 .menu__link,
@@ -647,6 +641,7 @@ body {
   text-align: center;
   flex: 0 1 calc(50% - 10px);
   padding: 8px 18px;
+
 }
 
 .card__stars {
@@ -659,7 +654,7 @@ body {
   margin: 0;
   font-size: var(--button-size);
   line-height: var(--button-spacing);
-  background-color: var(--color-disabled);
+  background-color: var(--color-background-2);
   padding: 8px 20px;
   border-radius: 4px;
   text-align: center;
