@@ -513,7 +513,6 @@ body {
 .filters__form {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
 }
 
 .filters__fieldset {
@@ -522,6 +521,14 @@ body {
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.filters__fieldset:nth-of-type(1) {
+  margin-right: 68px;
+}
+
+.filters__fieldset:nth-of-type(2) {
+  margin-right: 140px;
 }
 
 .filters__fieldset:nth-of-type(3) {
@@ -533,6 +540,7 @@ body {
   font-size: var(--headline-size-4);
   line-height: var(--headline-spacing-4);
   font-weight: 700;
+  padding: 0;
 }
 
 .filters__option-list {
@@ -550,6 +558,7 @@ body {
   width: 191px;
   align-self: flex-end;
   text-align: center;
+  margin-left: auto;
 }
 
 .catalog {
