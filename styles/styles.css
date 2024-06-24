@@ -691,6 +691,8 @@ body {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
   gap: 16px 18px;
 }
 
@@ -724,30 +726,30 @@ body {
 }
 
 .card__param {
-  flex: 0 1 calc(50% - 10px);
+  flex: 0 0 140px;
   margin: 0;
   font-size: var(--text-block-font-size);
   line-height: var(--text-block-line-height);
 }
 
-.card__param:nth-of-type(2) {
+.card__param:nth-of-type(2n) {
   text-align: right;
 }
 
 .card__button {
   text-align: center;
-  flex: 0 1 calc(50% - 10px);
+  flex: 0 0 140px;
   padding: 8px 18px;
 
 }
 
 .card__stars {
-  flex: 0 1 calc(50% - 10px);
+  flex: 0 0 140px;
   margin: 0;
 }
 
 .card__rating {
-  flex: 0 1 calc(50% - 10px);
+  flex: 0 0 140px;
   margin: 0;
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
