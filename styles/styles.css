@@ -446,7 +446,7 @@ body {
 }
 
 .hotel-search__text {
-  max-width: var(--section-container);
+  max-width: var(--container-inner);
   margin: 0 auto;
   margin-bottom: 54px;
 }
