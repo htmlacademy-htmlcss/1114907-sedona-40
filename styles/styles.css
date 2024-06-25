@@ -179,9 +179,9 @@ body {
 }
 
 .navbar {
-  position: relative;
   width: 100%;
   display: flex;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
   font-size: var(--headline-font-size-4);
@@ -189,20 +189,18 @@ body {
 }
 
 .navbar__brand-link {
-  position: absolute;
-  top: 0;
-  width: 140px;
   height: 64px;
+}
+
+.navbar__brand-logo {
+  width: 140px;
+  height: 70px;
 }
 
 .navbar__menu,
 .navbar__user-menu {
   margin: 0;
   padding: 0;
-}
-
-.navbar__menu {
-  padding-left: 170px;
 }
 
 .menu,
@@ -215,6 +213,7 @@ body {
 
 .menu {
   max-width: 640px;
+  margin-right: auto;
 }
 
 .user-menu {
