@@ -683,10 +683,9 @@ body {
 .card {
   position: relative;
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
   gap: 16px 18px;
 }
 
@@ -700,7 +699,7 @@ body {
 }
 
 .card__link {
-  flex: 1 1 100%;
+  grid-column: span 2;
   color: inherit;
   text-decoration: none;
 }
@@ -720,7 +719,7 @@ body {
 }
 
 .card__param {
-  flex: 0 0 140px;
+  align-self: start;
   margin: 0;
   font-size: var(--text-block-font-size);
   line-height: var(--text-block-line-height);
@@ -732,18 +731,14 @@ body {
 
 .card__button {
   text-align: center;
-  flex: 0 0 140px;
   padding: 8px 18px;
-
 }
 
 .card__stars {
-  flex: 0 0 140px;
   margin: 0;
 }
 
 .card__rating {
-  flex: 0 0 140px;
   margin: 0;
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
