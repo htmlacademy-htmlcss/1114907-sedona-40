@@ -685,17 +685,9 @@ body {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr auto;
   gap: 16px 18px;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  display: block;
   border: 1px solid var(--color-border);
-  pointer-events: none;
 }
 
 .card__link {
@@ -719,7 +711,6 @@ body {
 }
 
 .card__param {
-  align-self: start;
   margin: 0;
   font-size: var(--text-block-font-size);
   line-height: var(--text-block-line-height);
@@ -730,6 +721,7 @@ body {
 }
 
 .card__button {
+  align-self: end;
   text-align: center;
   padding: 8px 18px;
 }
