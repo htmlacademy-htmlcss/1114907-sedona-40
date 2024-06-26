@@ -69,10 +69,10 @@
   --button-border-radius: 4px;
   --button-weight: 700;
 
-  --input-size: 18px;
+  --input-font-size: 18px;
   --input-line-height: 24px;
 
-  --control-label-size: 18px;
+  --control-label-font-size: 18px;
   --control-label-line-height: 23px;
 
   --container-outer: 1200px;
@@ -491,7 +491,7 @@ body {
   max-width: 452px;
   width: 100%;
   font-family: inherit;
-  font-size: var(--input-size);
+  font-size: var(--input-font-size);
   line-height: var(--input-line-height);
   font-weight: 400;
   color: var(--color-primary);
@@ -576,7 +576,7 @@ body {
 }
 
 .filters__label {
-  font-size: var(--control-label-size);
+  font-size: var(--control-label-font-size);
   line-height: var(--control-label-line-height);
 }
 
