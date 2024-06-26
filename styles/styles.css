@@ -301,22 +301,28 @@ body {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--color-surface-12);
 }
 
-.advantage,
-.advantage__box {
-  min-height: 385px;
-  padding: 85px;
+.advantages__item:nth-child(2n + 1) {
+  background-color: var(--color-surface-20);
+}
+
+.block,
+.block__box {
   width: 400px;
   flex-basis: 400px;
+  min-height: 385px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  padding: 81px 85px;
 }
 
-.advantage--wide {
+.block--wide {
   flex-basis: 100%;
   flex-direction: row;
   gap: 0;
@@ -324,24 +330,17 @@ body {
   padding: 0;
 }
 
-.advantage--reverse .advantage__image {
+.block--reverse .block__image {
   order: -1;
 }
 
-.advantage:nth-child(2n + 1) {
-  background-color: var(--color-surface-20);
-}
 
-.advantage:nth-child(2n) {
-  background-color: var(--color-surface-12);
-}
-
-.advantage.advantage--on-surface {
+.block.block--on-surface {
   background-color: var(--color-surface);
   color: var(--color-on-surface);
 }
 
-.advantage__title {
+.block__title {
   margin: 0;
   font-size: var(--headline-font-size-3);
   line-height: var(--headline-line-height-3);
@@ -349,21 +348,21 @@ body {
   text-transform: uppercase;
 }
 
-.advantage__description {
+.block__description {
   margin: 0;
   font-size: var(--text-block-font-size);
   line-height: var(--text-block-line-height);
 }
 
-.advantage--on-surface .advantage__title {
+.block--on-surface .block__title {
   color: var(--color-on-surface);
 }
 
-.advantage--on-surface .advantage__title::after {
+.block--on-surface .block__title::after {
   --color-pseudo-element: var(--color-on-surface-30);
 }
 
-.advantage__image {
+.block__image {
   position: sticky;
   top: 0;
   display: block;
@@ -397,37 +396,15 @@ body {
   margin: 0;
   list-style-type: none;
   display: flex;
-}
-
-.feature {
-  width: 400px;
-  height: 385px;
-  flex-basis: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.feature:nth-child(2n+1) {
   background-color: var(--color-surface-12);
 }
 
-.feature__title {
-  max-width: 230px;
-  margin: 0 auto;
-  font-size: var(--headline-font-size-3);
-  line-height: var(--headline-line-height-3);
-  color: var(--color-primary);
-  text-transform: uppercase;
+.features__item:nth-child(2n) {
+  background-color: var(--color-background-1);
 }
 
-.feature__description {
-  max-width: 230px;
-  margin: 0 auto;
-  font-size: var(--text-block-font-size);
-  line-height: var(--text-block-line-height);
+.features__item .block__title {
+  margin-top: auto;
 }
 
 .hotel-search {
@@ -551,10 +528,6 @@ body {
 .filters__fieldset:nth-of-type(3) {
   width: 288px;
   flex-basis: 288px;
-}
-
-.filters__fieldset--cost {
-
 }
 
 .filters__legend {
