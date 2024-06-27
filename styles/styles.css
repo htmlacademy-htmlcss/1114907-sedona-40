@@ -403,7 +403,7 @@ body {
   background-color: var(--color-background-1);
 }
 
-.features__item .block__title {
+.block--with-icon .block__title {
   margin-top: auto;
 }
 
