@@ -317,6 +317,7 @@ body {
     "block-title"
     "block-description";
   gap: 30px;
+  padding: 81px 85px;
 }
 
 .block--wide {
@@ -341,7 +342,6 @@ body {
 }
 
 .block__title {
-  padding: 81px 85px 0 85px;
   grid-area: block-title;
   align-self: end;
   margin: 0;
@@ -349,6 +349,10 @@ body {
   line-height: var(--headline-line-height-3);
   color: var(--color-primary);
   text-transform: uppercase;
+}
+
+.block--wide .block__title {
+  padding: 81px 85px 0 85px;
 }
 
 .block--on-surface .block__title {
@@ -361,10 +365,13 @@ body {
 
 .block__description {
   grid-area: block-description;
-  padding: 0 85px 81px 85px;
   margin: 0;
   font-size: var(--text-block-font-size);
   line-height: var(--text-block-line-height);
+}
+
+.block--wide .block__description {
+  padding: 0 85px 81px 85px;
 }
 
 .block__image {
