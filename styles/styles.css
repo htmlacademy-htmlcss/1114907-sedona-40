@@ -148,8 +148,8 @@ body {
 }
 
 .page__wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
   width: var(--container-outer);
   margin: 0 auto;
@@ -256,11 +256,6 @@ body {
 
 .user-menu__button {
   margin-left: 20px;
-}
-
-.main-content,
-.content {
-  flex-grow: 1;
 }
 
 .hero {
