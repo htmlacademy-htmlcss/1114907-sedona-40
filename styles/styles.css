@@ -299,8 +299,8 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: var(--color-surface-12);
 }
 
@@ -309,10 +309,9 @@ body {
 }
 
 .block {
-  flex-basis: 400px;
   min-height: 385px;
-  flex-grow: 1;
   display: grid;
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "block-title"
     "block-description";
@@ -321,19 +320,19 @@ body {
 }
 
 .block--wide {
-  flex-basis: 100%;
-  gap: 30px 0;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "block-title        block-image"
-    "block-description  block-image";
-  grid-template-columns: 1fr 1fr;
+    "block-title        block-image block-image"
+    "block-description  block-image block-image";
+  gap: 30px 0;
   padding: 0;
 }
 
 .block--reverse {
   grid-template-areas:
-    "block-image block-title"
-    "block-image block-description";
+    "block-image block-image block-title"
+    "block-image block-image block-description";
 }
 
 .block.block--on-surface {
@@ -379,8 +378,15 @@ body {
   position: sticky;
   top: 0;
   display: block;
-  width: 800px;
-  height: 385px;
+  width: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
+  object-position: left center;
+}
+
+.block--reverse .block__image {
+  object-position: right center;
+  margin-left: auto;
 }
 
 .features {
@@ -410,6 +416,10 @@ body {
   list-style-type: none;
   display: flex;
   background-color: var(--color-surface-12);
+}
+
+.features__item {
+  flex: 1 1 400px;
 }
 
 .features__item:nth-child(2n) {
