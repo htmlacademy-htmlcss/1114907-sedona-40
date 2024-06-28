@@ -182,7 +182,7 @@ body {
   width: 100%;
   display: flex;
   gap: 30px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   font-size: var(--headline-font-size-4);
   line-height: var(--headline-line-height-4);
@@ -213,7 +213,7 @@ body {
 }
 
 .menu {
-  max-width: 640px;
+  max-width: 470px;
   margin-right: auto;
 }
 
