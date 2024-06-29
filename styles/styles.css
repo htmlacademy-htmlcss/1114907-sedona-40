@@ -328,7 +328,7 @@ body {
 
 .block--wide {
   grid-column: 1 / -1;
-  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) repeat(2, minmax(var(--block-width), 3fr));
+  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) repeat(2, auto);
   grid-template-rows: var(--block-y-indent) repeat(2, auto) var(--block-y-indent);
   grid-template-areas:
     ".  .                  .  block-image block-image"
@@ -338,7 +338,7 @@ body {
 }
 
 .block--reverse {
-  grid-template-columns: repeat(2, minmax(var(--block-width), 3fr)) var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
+  grid-template-columns: repeat(2, auto) var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
   grid-template-rows: 81px repeat(2, auto) 81px;
   grid-template-areas:
     "block-image block-image  .  .                  ."
