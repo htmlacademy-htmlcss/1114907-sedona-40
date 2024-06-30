@@ -326,21 +326,21 @@ body {
 
 .block--wide {
   grid-column: 1 / -1;
-  grid-template:
+  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) 1fr;
+  grid-template-areas:
     ".  .                  .  block-image"
     ".  block-title        .  block-image"
     ".  block-description  .  block-image"
-    ".  .                  .  block-image"
-    / var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) 1fr;
+    ".  .                  .  block-image";
 }
 
 .block--reverse {
-  grid-template:
+  grid-template-columns: 1fr var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
+  grid-template-areas:
     "block-image  .  .                  ."
     "block-image  .  block-title        ."
     "block-image  .  block-description  ."
-    "block-image  .  .                  ."
-    / 1fr var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
+    "block-image  .  .                  .";
 }
 
 .block.block--on-surface {
