@@ -284,8 +284,7 @@ body {
 }
 
 .advantages__title {
-  grid-column: 2 / -2;
-  grid-row: 2 / 3;
+  grid-area: 2 / 2 / 3 / -2;
   margin: 0;
   margin-bottom: 25px;
   font-size: var(--headline-font-size-2);
@@ -295,15 +294,13 @@ body {
 }
 
 .advantages__text {
-  grid-column: 2 / -2;
-  grid-row: 3 / 4;
+  grid-area: 3 / 2 / 4 / -2;
   margin: 0;
   margin-bottom: 69px;
 }
 
 .advantages__list {
-  grid-column: 1 / -1;
-  grid-row: 4 / 5;
+  grid-area: 4 / 1 / 5 / -1;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -319,32 +316,31 @@ body {
 .block {
   min-height: 385px;
   display: grid;
-  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), auto) var(--block-x-indent);
-  grid-template-rows: var(--block-y-indent) repeat(2, auto) var(--block-y-indent);
-  grid-template-areas:
-    ". .                  ."
-    ". block-title        ."
-    ". block-description  ."
-    ". .                  .";
+  grid-template:
+    ". .                  ." var(--block-y-indent)
+    ". block-title        ." auto
+    ". block-description  ." auto
+    ". .                  ." var(--block-y-indent)
+    / var(--block-x-indent) minmax(var(--block-container), auto) var(--block-x-indent);
 }
 
 .block--wide {
   grid-column: 1 / -1;
-  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) 1fr;
-  grid-template-areas:
+  grid-template:
     ".  .                  .  block-image"
     ".  block-title        .  block-image"
     ".  block-description  .  block-image"
-    ".  .                  .  block-image";
+    ".  .                  .  block-image"
+    / var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) 1fr;
 }
 
 .block--reverse {
-  grid-template-columns: 1fr var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
-  grid-template-areas:
+  grid-template:
     "block-image  .  .                  ."
     "block-image  .  block-title        ."
     "block-image  .  block-description  ."
-    "block-image  .  .                  .";
+    "block-image  .  .                  ."
+    / 1fr var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
 }
 
 .block.block--on-surface {
@@ -403,8 +399,7 @@ body {
 }
 
 .features__title {
-  grid-column: 2 / -2;
-  grid-row: 2 / 3;
+  grid-area: 2 / 2 / 3 / -2;
   margin: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -414,25 +409,19 @@ body {
 }
 
 .features__text {
-  grid-column: 2 / -2;
-  grid-row: 3 / 4;
+  grid-area: 3 / 2 / 4 / -2;
   margin: 0;
   margin-bottom: 64px;
 }
 
 .features__list {
-  grid-column: 1 / -1;
-  grid-row: 4 / 5;
+  grid-area: 4 / 1 / 5 / -1;
   padding: 0;
   margin: 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: var(--color-surface-12);
-}
-
-.features__item {
-  flex: 1 1 400px;
 }
 
 .features__item:nth-child(2n) {
@@ -447,8 +436,7 @@ body {
 }
 
 .hotel-search__title {
-  grid-column: 2 / -2;
-  grid-row: 2 / 3;
+  grid-area: 2 / 2 / 3 / -2;
   margin: 0;
   margin-bottom: 20px;
   font-size: var(--headline-font-size-2);
@@ -458,15 +446,13 @@ body {
 }
 
 .hotel-search__text {
-  grid-column: 2 / -2;
-  grid-row: 3 / 4;
+  grid-area: 3 / 2 / 4 / -2;
   margin: 0;
   margin-bottom: 54px;
 }
 
 .hotel-search__button {
-  grid-column: 2 / -2;
-  grid-row: 4 / 5;
+  grid-area: 4 / 2 / 5 / -2;
   justify-self: center;
 }
 
@@ -487,8 +473,7 @@ body {
 }
 
 .subscribe__title {
-  grid-column: 2 / -2;
-  grid-row: 2 / 3;
+  grid-area: 2 / 2 / 3 / -2;
   margin: 0;
   margin-bottom: 20px;
   font-size: var(--headline-font-size-2);
@@ -497,15 +482,13 @@ body {
 }
 
 .subscribe__text {
-  grid-column: 2 / -2;
-  grid-row: 3 / 4;
+  grid-area: 3 / 2 / 4 / -2;
   margin: 0;
   margin-bottom: 54px;
 }
 
 .subscribe__form {
-  grid-column: 2 / -2;
-  grid-row: 4 / 5;
+  grid-area: 4 / 2 / 5 / -2;
   max-width: 684px;
   width: 100%;
   justify-self: center;
