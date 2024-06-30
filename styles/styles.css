@@ -330,23 +330,21 @@ body {
 
 .block--wide {
   grid-column: 1 / -1;
-  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) repeat(2, auto);
-  grid-template-rows: var(--block-y-indent) repeat(2, auto) var(--block-y-indent);
+  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent) 1fr;
   grid-template-areas:
-    ".  .                  .  block-image block-image"
-    ".  block-title        .  block-image block-image"
-    ".  block-description  .  block-image block-image"
-    ".  .                  .  block-image block-image";
+    ".  .                  .  block-image"
+    ".  block-title        .  block-image"
+    ".  block-description  .  block-image"
+    ".  .                  .  block-image";
 }
 
 .block--reverse {
-  grid-template-columns: repeat(2, auto) var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
-  grid-template-rows: 81px repeat(2, auto) 81px;
+  grid-template-columns: 1fr var(--block-x-indent) minmax(var(--block-container), calc(33.333% - 2 * var(--block-x-indent))) var(--block-x-indent);
   grid-template-areas:
-    "block-image block-image  .  .                  ."
-    "block-image block-image  .  block-title        ."
-    "block-image block-image  .  block-description  ."
-    "block-image block-image  .  .                  .";
+    "block-image  .  .                  ."
+    "block-image  .  block-title        ."
+    "block-image  .  block-description  ."
+    "block-image  .  .                  .";
 }
 
 .block.block--on-surface {
