@@ -155,7 +155,7 @@ body {
 
 .page__wrapper {
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content 1fr;
   min-height: 100%;
   min-width: var(--page-min-width);
   width: var(--container-outer);
