@@ -78,6 +78,7 @@
   --container-outer: 1200px;
   --container-inner: 700px;
 
+  --page-min-width: 1200px;
   --page-x-indent: 70px;
 
   --block-x-indent: 85px;
@@ -156,6 +157,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
+  min-width: var(--page-min-width);
   width: var(--container-outer);
   margin: 0 auto;
   box-shadow: 0px 0px 15px 0 var(--color-shadow);
@@ -306,7 +308,7 @@ body {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(3, 1fr);
   background-color: var(--color-surface-12);
 }
 
@@ -317,7 +319,7 @@ body {
 .block {
   min-height: 385px;
   display: grid;
-  grid-template-columns: var(--block-x-indent) 3fr var(--block-x-indent);
+  grid-template-columns: var(--block-x-indent) minmax(var(--block-container), auto) var(--block-x-indent);
   grid-template-rows: var(--block-y-indent) repeat(2, auto) var(--block-y-indent);
   grid-template-areas:
     ". .                  ."
@@ -380,7 +382,6 @@ body {
 }
 
 .block__image {
-  grid-row: 1 / -1;
   grid-area: block-image;
   position: sticky;
   top: 0;
