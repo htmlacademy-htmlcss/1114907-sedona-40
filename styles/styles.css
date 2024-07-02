@@ -153,6 +153,11 @@ body {
   background-color: var(--color-accent-2);
 }
 
+.button--success {
+  color: var(--color-on-surface);
+  background-color: var(--color-success);
+}
+
 .page__wrapper {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
