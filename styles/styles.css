@@ -113,7 +113,7 @@ body {
 }
 
 .button {
-  display: inline-block;
+  display: block;
   font-family: inherit;
   font-size: var(--button-font-size);
   font-weight: var(--button-weight);
@@ -243,7 +243,7 @@ body {
 
 .user-menu__link {
   box-sizing: content-box;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   padding: 22px 12px;
 }
@@ -443,7 +443,8 @@ body {
 }
 
 .hotel-search__button {
-
+  max-width: var(--container-inner);
+  margin: 0 auto;
 }
 
 .subscribe {
@@ -679,7 +680,7 @@ body {
 .card {
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr);
   grid-template-rows: 212px min-content 1fr;
   gap: 16px 20px;
   border-radius: var(--button-border-radius);
@@ -718,6 +719,7 @@ body {
   margin: 0;
   font-size: var(--text-block-font-size);
   line-height: var(--text-block-line-height);
+  overflow-wrap: break-word;
 }
 
 .card__param:nth-of-type(2n) {
@@ -725,11 +727,10 @@ body {
 }
 
 .card__button {
+  align-self: start;
   padding: 8px 18px;
   text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  overflow-wrap: break-word;
 }
 
 .card__stars {
@@ -751,6 +752,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   color: var(--color-on-surface);
 }
@@ -759,7 +761,6 @@ body {
 .pagination__dots {
   --button-font-size: 20px;
   --button-line-height: 36px;
-  --button-border-radius: 4px;
 
   display: block;
   min-width: 60px;
@@ -808,12 +809,9 @@ body {
   align-items: center;
 }
 
-.social-networks__item {
-}
-
 .social-networks__link {
   display: block;
-  width: 48px;
+  min-width: 48px;
   height: 40px;
 }
 
