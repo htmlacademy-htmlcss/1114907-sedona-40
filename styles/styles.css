@@ -544,12 +544,13 @@ body {
   border: none;
 }
 
-.filters__fieldset:nth-of-type(2n) {
+.filters__fieldset--offset-x-35 {
   margin-right: 35px;
 }
 
-.filters__fieldset:nth-of-type(3n) {
+.filters__fieldset--offset-x-35 + .filters__fieldset--offset-x-35 {
   margin-left: 35px;
+  margin-right: unset;
 }
 
 .filters__fieldset--cost {
