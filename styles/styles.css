@@ -324,7 +324,6 @@ body {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: minmax(var(--block-width), 1fr) 2fr;
-  align-items: center;
 }
 
 .block--reverse {
@@ -380,8 +379,8 @@ body {
   position: sticky;
   top: 0;
   display: block;
-  width: 100%;
-  max-height: 100%;
+  width: 800px;
+  height: 385px;
   object-fit: scale-down;
   object-position: left center;
 }
@@ -627,12 +626,11 @@ body {
 }
 
 .filters__button-group {
-  width: 191px;
   padding-top: 56px;
 }
 
 .filters__button {
-  width: 100%;
+  width: 191px;
 }
 
 .filters__button:first-child {
@@ -669,7 +667,7 @@ body {
 
 .catalog__view-button {
   display: block;
-  width: 48px;
+  min-width: 48px;
   height: 48px;
 }
 
