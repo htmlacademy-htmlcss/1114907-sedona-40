@@ -789,6 +789,7 @@ body {
   gap: 16px;
   font-size: var(--control-label-font-size);
   line-height: var(--control-label-line-height);
+  cursor: pointer;
 }
 
 .filters__fieldset--cost .filters__label {
@@ -813,6 +814,42 @@ body {
 
 .filters__fieldset--cost .filters__label:has(.filters__input:focus) {
   outline: 2px solid var(--color-accent-2);
+}
+
+.filters__input {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--button-border-radius);
+  background-color: #fff;
+}
+
+.filters__input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filters__input:checked::after {
+  content: "";
+  background-color: #3f5e72;
+  display: block;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.filters__input[type="checkbox"]:checked::after {
+  width: 20px;
+  height: 20px;
+  mask-image: url("../images/icons/icon-control-checkbox.svg");
+  mask-mode: alpha;
+}
+
+.filters__input[type="radio"]:checked::after {
+  width: 10px;
+  height: 10px;
+  mask-image: url("../images/icons/icon-control-radio.svg");
 }
 
 .filters__input[type="number"] {
