@@ -40,6 +40,7 @@
   --color-error: #ff5757;
   --color-disabled: #e5e5e5;
 
+  --color-form-control: #3f5e72;
   --color-border: #e6e6e6;
   --color-shadow: var(--color-primary-20);
   --color-pseudo-element: var(--color-primary-30);
@@ -644,7 +645,7 @@ body {
 }
 
 .subscribe__input::placeholder {
-  opacity: 0.6;
+  filter: opacity(60%);
 }
 
 .subscribe__button {
@@ -792,6 +793,88 @@ body {
   cursor: pointer;
 }
 
+.filters__label--type--range {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 143px;
+  margin-bottom: 36px;
+}
+
+.filters__label--type--range:nth-of-type(1) {
+  margin-right: 2px;
+}
+
+.filters__label--type--range:nth-of-type(1) .filters__input {
+  border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
+}
+
+.filters__label--type--range:nth-of-type(2) .filters__input {
+  border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
+}
+
+.filters__label-inner {
+  position: absolute;
+  right: 0;
+  padding: 12px 20px;
+  color: var(--color-primary-30);
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+}
+
+.filters__input {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border-radius: var(--button-border-radius);
+  background-color: var(--color-background-1);
+}
+
+.filters__input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filters__input:checked::after {
+  content: "";
+  background-color: var(--color-form-control);
+  display: block;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.filters__input[type="checkbox"]:checked::after {
+  width: 20px;
+  height: 20px;
+  mask-image: url("../images/icons/icon-control-checkbox.svg");
+}
+
+.filters__input[type="radio"]:checked::after {
+  width: 10px;
+  height: 10px;
+  mask-image: url("../images/icons/icon-control-radio.svg");
+}
+
+.filters__label--type--range .filters__input {
+  display: block;
+  width: 100%;
+  height: max-content;
+  padding: 12px 50px 12px 20px;
+  font-weight: 700;
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+  color: var(--color-primary);
+  background-color: var(--color-background-2);
+  border: none;
+}
+
+.filters__label--type--range .filters__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
 .filters__label--type--checkbox:hover,
 .filters__label--type--radio:hover {
   filter: opacity(60%);
@@ -806,78 +889,8 @@ body {
   filter: opacity(30%);
 }
 
-.filters__fieldset--cost .filters__label {
-  display: flex;
-  align-items: center;
-  width: 143px;
-  margin-bottom: 36px;
-  padding: 12px 20px;
-  color: var(--color-primary-30);
-  background-color: var(--color-background-2);
-  line-height: var(--input-line-height);
-}
-
-.filters__fieldset--cost .filters__label:nth-of-type(1) {
-  margin-right: 2px;
-  border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
-}
-
-.filters__fieldset--cost .filters__label:nth-of-type(2) {
-  border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
-}
-
-.filters__fieldset--cost .filters__label:has(.filters__input:focus) {
-  outline: 2px solid var(--color-accent-2);
-}
-
-.filters__input {
-  appearance: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  border-radius: var(--button-border-radius);
-  background-color: #fff;
-}
-
-.filters__input[type="radio"] {
-  border-radius: 50%;
-}
-
-.filters__input:checked::after {
-  content: "";
-  background-color: #3f5e72;
-  display: block;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-
-.filters__input[type="checkbox"]:checked::after {
-  width: 20px;
-  height: 20px;
-  mask-image: url("../images/icons/icon-control-checkbox.svg");
-  mask-mode: alpha;
-}
-
-.filters__input[type="radio"]:checked::after {
-  width: 10px;
-  height: 10px;
-  mask-image: url("../images/icons/icon-control-radio.svg");
-}
-
-.filters__input[type="number"] {
-  width: 100%;
-  padding: 0 8px 0 0;
-  color: var(--color-primary);
-  background-color: var(--color-background-2);
-}
-
-.filters__input[type="number"],
-.filters__input[type="number"]:focus {
-  border: none;
-  outline: none;
+.filters__label--type--range:hover .filters__input {
+  background-color: var(--color-border);
 }
 
 .filters__input[type="range"] {
