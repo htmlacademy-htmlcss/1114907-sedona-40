@@ -792,6 +792,20 @@ body {
   cursor: pointer;
 }
 
+.filters__label--type--checkbox:hover,
+.filters__label--type--radio:hover {
+  filter: opacity(60%);
+}
+
+.filters__label--type--checkbox:active,
+.filters__label--type--radio:active,
+.filters__label--type--checkbox:active .filters__input,
+.filters__label--type--radio:active .filters__input,
+.filters__label--type--checkbox:has(.filters__input:active),
+.filters__label--type--radio:has(.filters__input:active) {
+  filter: opacity(30%);
+}
+
 .filters__fieldset--cost .filters__label {
   display: flex;
   align-items: center;
@@ -823,6 +837,7 @@ body {
   align-items: center;
   width: 20px;
   height: 20px;
+  margin: 0;
   border-radius: var(--button-border-radius);
   background-color: #fff;
 }
