@@ -127,13 +127,13 @@
               <fieldset class="filters__fieldset filters__fieldset--cost">
                 <legend class="filters__legend">Стоимость, ₽:</legend>
 
-                <label class="filters__label">
+                <label class="filters__label filters__label--type--range">
+                  <span class="filters__label-inner">от</span>
                   <input class="filters__input" type="number" name="cost-min" placeholder="0" value="0">
-                  от
                 </label>
-                <label class="filters__label">
+                <label class="filters__label filters__label--type--range">
+                  <span class="filters__label-inner">до</span>
                   <input class="filters__input" type="number" name="cost-max" placeholder="9000" value="9000">
-                  до
                 </label>
                 <input class="filters__input" type="range" name="cost" min="0" max="9000">
               </fieldset>
