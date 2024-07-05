@@ -81,7 +81,7 @@
   --control-label-line-height: 23px;
 
   --container-outer: 1200px;
-  --container-inner: 700px;
+  --container-inner: 684px;
 
   --page-min-width: 1200px;
   --page-x-indent: 70px;
@@ -623,7 +623,7 @@ body {
 }
 
 .subscribe__form {
-  max-width: 684px;
+  max-width: var(--container-inner);
   width: 100%;
   display: flex;
   margin: 0 auto;
