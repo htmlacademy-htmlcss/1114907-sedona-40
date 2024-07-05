@@ -1067,44 +1067,44 @@ body {
 }
 
 .card__stars::before {
-  --width-per-star: 21px;
-  --stars-number: 1;
+  --star-width: 21px;
+  --star-quantity: 1;
 
   content: "";
   display: block;
-  min-width: var(--width-per-star);
-  width: calc(var(--stars-number) * var(--width-per-star));
+  min-width: var(--star-width);
+  width: calc(var(--star-quantity) * var(--star-width));
   height: 20px;
   padding: 10px;
   mask-image: url("../images/icons/icon-star.svg");
   mask-repeat: repeat-x;
-  mask-size: var(--width-per-star) 20px;
+  mask-size: var(--star-width) 20px;
   mask-position: left center;
   background-color: var(--color-accent-2);
 }
 
 .card__stars--two::before {
-  --stars-number: 2;
+  --star-quantity: 2;
 }
 
 .card__stars--three::before {
-  --stars-number: 3;
+  --star-quantity: 3;
 }
 
 .card__stars--four::before {
-  --stars-number: 4;
+  --star-quantity: 4;
 }
 
 .card__stars--five::before {
-  --stars-number: 5;
+  --star-quantity: 5;
 }
 
 .card__stars--six::before {
-  --stars-number: 6;
+  --star-quantity: 6;
 }
 
 .card__stars--seven::before {
-  --stars-number: 7;
+  --star-quantity: 7;
 }
 
 .card__rating {
