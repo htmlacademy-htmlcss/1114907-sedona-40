@@ -194,7 +194,7 @@ body {
   background-color: var(--color-disabled);
 }
 
-.page__wrapper {
+.wrapper {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
@@ -205,7 +205,7 @@ body {
   background-color: var(--color-background-1);
 }
 
-.page__cover {
+.cover {
   padding: 35px var(--page-x-indent) 70px;
   color: var(--color-on-surface);
   background-color: var(--color-surface-20);
@@ -215,7 +215,7 @@ body {
   background-position: center;
 }
 
-.page__title {
+.page-title {
   margin-top: 0;
   margin-bottom: 8px;
   font-size: var(--headline-font-size-1);
