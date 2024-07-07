@@ -486,21 +486,26 @@ body {
   height: 72px;
   margin: 0 auto;
   mask-repeat: no-repeat;
-  mask-size: 75px 72px;
-  mask-position: center;
+  mask-size: 84px 84px;
   background-color: var(--color-accent-2);
 }
 
 .block--icon-housing .block__inner::before {
   mask-image: url("../images/icons/icon-housing.svg");
+  mask-position: center -9px;
 }
 
 .block--icon-eating .block__inner::before {
   mask-image: url("../images/icons/icon-eating.svg");
+  mask-position: center -10px;
 }
 
 .block--icon-souvenir .block__inner::before {
+  height: 76px;
+  margin-top: -2px;
+  margin-bottom: -2px;
   mask-image: url("../images/icons/icon-souvenir.svg");
+  mask-position: center -5px;
 }
 
 .block--on-surface .block__title {
@@ -675,7 +680,7 @@ body {
   content: "";
   display: block;
   width: 8px;
-  height: 20px;
+  height: 19px;
   padding: 5px 0;
   mask-image: url("../images/icons/icon-arrow-right.svg");
   mask-repeat: no-repeat;
