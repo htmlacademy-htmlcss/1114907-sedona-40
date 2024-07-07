@@ -77,6 +77,9 @@
   --input-font-size: 18px;
   --input-line-height: 24px;
 
+  --select-font-size: 18px;
+  --select-line-height: 21px;
+
   --control-label-font-size: 18px;
   --control-label-line-height: 23px;
 
@@ -132,14 +135,14 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 8px 34px;
+  padding: 7px 32px;
 }
 
 .button--big {
   --button-font-size: 20px;
   --button-line-height: 36px;
 
-  padding: 8px 50px;
+  padding: 7px 50px;
 }
 
 .button--regular {
@@ -223,6 +226,7 @@ body {
 }
 
 .header {
+  position: relative;
   padding: 0 var(--page-x-indent);
 }
 
@@ -237,7 +241,7 @@ body {
 }
 
 .navbar__brand-link {
-  position: relative;
+  width: 138px;
   height: 64px;
 }
 
@@ -251,6 +255,7 @@ body {
 }
 
 .navbar__brand-logo {
+  display: block;
   width: 140px;
   height: 70px;
 }
@@ -373,6 +378,7 @@ body {
 
 .user-menu__button {
   margin-left: 20px;
+  min-width: 160px;
 }
 
 .hero {
@@ -382,8 +388,8 @@ body {
   background-color: var(--color-surface-20);
   background-image: url("../images/divider.svg"), url("../images/background-home.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% auto, cover;
-  background-position: bottom center, center;
+  background-size: 100% auto, 100%;
+  background-position: bottom center, top;
 }
 
 .advantages {
@@ -404,7 +410,7 @@ body {
 .advantages__text {
   max-width: var(--container-inner);
   margin: 0 auto;
-  margin-bottom: 69px;
+  margin-bottom: 90px;
 }
 
 .advantages__list {
@@ -935,15 +941,15 @@ body {
 
 .catalog__select {
   width: 292px;
-  padding: 12px 60px 12px 20px;
+  padding: 12px 58px 12px 18px;
   margin-left: auto;
   margin-right: 70px;
   font-family: inherit;
-  font-size: var(--select-size);
+  font-size: var(--select-font-size);
   line-height: var(--select-line-height);
   background-image: url("../images/icons/icon-arrow-bottom.svg");
   background-repeat: no-repeat;
-  background-position: right 20px top 12px;
+  background-position: right 13px top 12px;
   border: 2px solid var(--color-disabled);
   border-radius: var(--button-border-radius);
   cursor: pointer;
@@ -1061,7 +1067,7 @@ body {
 
 .card__button {
   align-self: start;
-  padding: 8px 16px;
+  padding: 7px 16px;
   text-align: center;
   overflow-wrap: break-word;
 }
@@ -1120,16 +1126,19 @@ body {
   padding: 8px 20px;
   border-radius: 4px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .pagination {
   margin: 0;
   padding: 0;
+  padding-top: 39px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   color: var(--color-on-surface);
+  border-top: 1px solid var(--color-border);
 }
 
 .pagination__link,
