@@ -970,7 +970,7 @@ body {
 }
 
 .catalog__view-button:hover {
-  border-color: var(--color-accent-2);
+  border-color: var(--color-primary);
 }
 
 .catalog__view-button--active {
@@ -980,8 +980,8 @@ body {
 .catalog__view-button::before {
   content: "";
   display: block;
-  width: 16px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
@@ -1072,19 +1072,19 @@ body {
 }
 
 .card__stars::before {
-  --star-width: 21px;
+  --star-width: 24px;
   --star-quantity: 1;
 
   content: "";
   display: block;
   min-width: var(--star-width);
   width: calc(var(--star-quantity) * var(--star-width));
-  height: 20px;
-  padding: 10px;
+  height: 37px;
+  padding: 7px 0 10px;
   mask-image: url("../images/icons/icon-star.svg");
   mask-repeat: repeat-x;
   mask-size: var(--star-width) 20px;
-  mask-position: left center;
+  mask-position: -1px center;
   background-color: var(--color-accent-2);
 }
 
