@@ -383,13 +383,17 @@ body {
 
 .hero {
   padding: 51px 0 82px;
-  text-align: center;
   color: var(--color-on-surface);
   background-color: var(--color-surface-20);
   background-image: url("../images/divider.svg"), url("../images/background-home.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% auto, 100%;
+  background-size: 100% auto, cover;
   background-position: bottom center, top;
+}
+
+.hero img {
+  display: block;
+  margin: 0 auto;
 }
 
 .advantages {
