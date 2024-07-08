@@ -331,30 +331,30 @@ body {
 
 .user-menu__link--favourites,
 .user-menu__link--search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu__link--favourites {
+  --icon: url("../images/icons/icon-heart.svg");
   position: relative;
+}
+
+.user-menu__link--search {
+  --icon: url("../images/icons/icon-search.svg");
 }
 
 .user-menu__link--favourites::before,
 .user-menu__link--search::before {
   content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
+  display: block;
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-}
-
-.user-menu__link--search::before {
-  background-image: url("../images/icons/icon-search.svg");
-}
-
-.user-menu__link--favourites::before {
-  background-image: url("../images/icons/icon-heart.svg");
+  background-image: var(--icon);
 }
 
 .user-menu__badge {
@@ -388,7 +388,7 @@ body {
   background-image: url("../images/divider.svg"), url("../images/background-home.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, cover;
-  background-position: bottom center, top;
+  background-position: bottom center, center;
 }
 
 .hero img {
@@ -498,24 +498,26 @@ body {
   mask-repeat: no-repeat;
   mask-size: 84px 84px;
   background-color: var(--color-accent-2);
+  mask-image: var(--icon);
+  mask-position: var(--icon-position);
 }
 
 .block--icon-housing .block__inner::before {
-  mask-image: url("../images/icons/icon-housing.svg");
-  mask-position: center -9px;
+  --icon: url("../images/icons/icon-housing.svg");
+  --icon-position: center -9px;
 }
 
 .block--icon-eating .block__inner::before {
-  mask-image: url("../images/icons/icon-eating.svg");
-  mask-position: center -10px;
+  --icon: url("../images/icons/icon-eating.svg");
+  --icon-position: center -10px;
 }
 
 .block--icon-souvenir .block__inner::before {
+  --icon: url("../images/icons/icon-souvenir.svg");
+  --icon-position: center -5px;
   height: 76px;
   margin-top: -2px;
   margin-bottom: -2px;
-  mask-image: url("../images/icons/icon-souvenir.svg");
-  mask-position: center -5px;
 }
 
 .block--on-surface .block__title {
@@ -691,7 +693,7 @@ body {
   display: block;
   width: 8px;
   height: 19px;
-  padding: 5px 0;
+  padding: 1px 0;
   mask-image: url("../images/icons/icon-arrow-right.svg");
   mask-repeat: no-repeat;
   mask-position: center;
@@ -989,6 +991,18 @@ body {
   border-color: var(--color-primary);
 }
 
+.catalog__view-button--tile {
+  --icon: url("../images/icons/icon-tile.svg");
+}
+
+.catalog__view-button--card {
+  --icon: url("../images/icons/icon-slideshow.svg");
+}
+
+.catalog__view-button--list {
+  --icon: url("../images/icons/icon-list.svg");
+}
+
 .catalog__view-button::before {
   content: "";
   display: block;
@@ -998,18 +1012,7 @@ body {
   mask-size: contain;
   mask-position: center;
   background-color: var(--color-primary);
-}
-
-.catalog__view-button--tile::before {
-  mask-image: url("../images/icons/icon-tile.svg");
-}
-
-.catalog__view-button--card::before {
-  mask-image: url("../images/icons/icon-slideshow.svg");
-}
-
-.catalog__view-button--list::before {
-  mask-image: url("../images/icons/icon-list.svg");
+  mask-image: var(--icon);
 }
 
 .catalog__product-list {
@@ -1116,14 +1119,6 @@ body {
   --star-quantity: 5;
 }
 
-.card__stars--six::before {
-  --star-quantity: 6;
-}
-
-.card__stars--seven::before {
-  --star-quantity: 7;
-}
-
 .card__rating {
   margin: 0;
   font-size: var(--button-font-size);
@@ -1224,6 +1219,7 @@ body {
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: var(--color-accent-2);
+  mask-image: var(--icon);
 }
 
 .social-networks__link:hover::before,
@@ -1236,21 +1232,21 @@ body {
 }
 
 .social-networks__link--vk::before {
+  --icon: url("../images/icons/icon-social-vk.svg");
   width: 24px;
   height: 14px;
-  mask-image: url("../images/icons/icon-social-vk.svg");
 }
 
 .social-networks__link--tg::before {
+  --icon: url("../images/icons/icon-social-tg.svg");
   width: 18px;
   height: 16px;
-  mask-image: url("../images/icons/icon-social-tg.svg");
 }
 
 .social-networks__link--youtube::before {
+  --icon: url("../images/icons/icon-social-youtube.svg");
   width: 22px;
   height: 17px;
-  mask-image: url("../images/icons/icon-social-youtube.svg");
 }
 
 .contacts {
