@@ -195,9 +195,14 @@ body {
   color: var(--color-on-surface-30);
 }
 
-.button:disabled {
+.button--default:disabled {
   color: var(--color-on-surface-30);
+  pointer-events: none;
+}
+
+.button:not(.button--default):disabled {
   background-color: var(--color-disabled);
+  pointer-events: none;
 }
 
 .wrapper {
@@ -904,20 +909,21 @@ body {
 
 .filters__label--type--checkbox:active,
 .filters__label--type--radio:active,
-.filters__label--type--checkbox:active .filters__input,
-.filters__label--type--radio:active .filters__input,
+/* .filters__label--type--checkbox:active .filters__input,
+.filters__label--type--radio:active .filters__input, */
 .filters__label--type--checkbox:has(.filters__input:active),
 .filters__label--type--radio:has(.filters__input:active) {
   filter: opacity(30%);
 }
 
-.filters__label--type--range:hover .filters__input {
-  background-color: var(--color-border);
+.filters__label--type--checkbox:has(.filters__input:disabled),
+.filters__label--type--radio:has(.filters__input:disabled) {
+  filter: opacity(15%);
+  pointer-events: none;
 }
 
-.filters__input[type="range"] {
-  width: 288px;
-  margin: 0;
+.filters__label--type--range:hover .filters__input {
+  background-color: var(--color-border);
 }
 
 .filters__range-slider {
@@ -1001,6 +1007,7 @@ body {
   padding: 12px 58px 12px 18px;
   margin-left: auto;
   margin-right: 70px;
+  color: var(--color-secondary);
   font-family: inherit;
   font-size: var(--select-font-size);
   line-height: var(--select-line-height);
@@ -1017,6 +1024,13 @@ body {
   border-color: var(--color-accent-2);
 }
 
+.catalog__select:disabled {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  filter: opacity(30%);
+  cursor: default;
+}
+
 .catalog__view-button-group {
   display: flex;
   gap: 8px;
@@ -1030,6 +1044,7 @@ body {
   height: 48px;
   border: 2px solid var(--color-disabled);
   border-radius: var(--button-border-radius);
+  cursor: pointer;
 }
 
 .catalog__view-button:hover {
@@ -1038,6 +1053,7 @@ body {
 
 .catalog__view-button--active {
   border-color: var(--color-primary);
+  pointer-events: none;
 }
 
 .catalog__view-button--tile {
@@ -1228,7 +1244,7 @@ body {
 .pagination__dots {
   color: var(--color-primary);
   background-color: transparent;
-  user-select: none;
+  pointer-events: none;
 }
 
 .footer {
@@ -1360,18 +1376,21 @@ body {
   background-color: var(--color-overlay);
   box-shadow: 0px 25px 50px 0px var(--color-primary-15);
   opacity: 1;
-  transform: translateY(0%) scale(1, 1);
+  transform: scaleY(1);
   transform-origin: top;
-  z-index: 9;
   overflow-y: auto;
-  transition: all 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.modal-overlay::-webkit-scrollbar {
+  width: 0;
 }
 
 .modal-overlay--closed {
   opacity: 0;
-  transform: translateY(-100%) scale(1, 0.2);
-  transition: all 0.3s ease-in-out 0.3s;
-  z-index: -1;
+  transform: scaleY(0);
+  transition: opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out 0.3s;
+  pointer-events: none;
 }
 
 .modal {
@@ -1384,10 +1403,6 @@ body {
   border-radius: 30px;
   opacity: 1;
   transition: opacity 0.6s ease-in-out 0.6s;
-}
-
-.modal::-webkit-scrollbar {
-  width: 0;
 }
 
 .modal-overlay--closed .modal {
