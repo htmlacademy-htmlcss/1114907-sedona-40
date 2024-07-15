@@ -129,13 +129,22 @@
 
                 <label class="filters__label filters__label--type--range">
                   <span class="filters__label-inner">от</span>
-                  <input class="filters__input" type="number" name="cost-min" placeholder="0" value="0">
+                  <input class="filters__input filters__input--type--range" type="number" name="cost-min" placeholder="0" value="0">
                 </label>
                 <label class="filters__label filters__label--type--range">
                   <span class="filters__label-inner">до</span>
-                  <input class="filters__input" type="number" name="cost-max" placeholder="9000" value="9000">
+                  <input class="filters__input filters__input--type--range" type="number" name="cost-max" placeholder="9000" value="9000">
                 </label>
-                <input class="filters__input" type="range" name="cost" min="0" max="9000">
+                <div class="filters__range-slider">
+                  <div class="filters__range-track" style="left: 0; width: 78.7456%;">
+                    <button class="filters__range-handler filters__range-handler--min" type="button">
+                      <span class="visually-hidden">Изменить минимальную стоимость</span>
+                    </button>
+                    <button class="filters__range-handler filters__range-handler--max" type="button">
+                      <span class="visually-hidden">Изменить максималную стоимость</span>
+                    </button>
+                  </div>
+                </div>
               </fieldset>
               <!-- /.filters__fieldset -->
 
