@@ -820,7 +820,7 @@ body {
   cursor: pointer;
 }
 
-.filters__label--type--range {
+.filters__label--range {
   position: relative;
   display: flex;
   align-items: center;
@@ -828,15 +828,15 @@ body {
   margin-bottom: 44px;
 }
 
-.filters__label--type--range:nth-of-type(1) {
+.filters__label--range:nth-of-type(1) {
   margin-right: 2px;
 }
 
-.filters__label--type--range:nth-of-type(1) .filters__input {
+.filters__label--range:nth-of-type(1) .filters__input {
   border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
 }
 
-.filters__label--type--range:nth-of-type(2) .filters__input {
+.filters__label--range:nth-of-type(2) .filters__input {
   border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
 }
 
@@ -886,7 +886,7 @@ body {
   mask-image: url("../images/icons/icon-control-radio.svg");
 }
 
-.filters__label--type--range .filters__input {
+.filters__label--range .filters__input {
   display: block;
   width: 100%;
   height: max-content;
@@ -900,31 +900,29 @@ body {
   border: 0;
 }
 
-.filters__label--type--range .filters__input::-webkit-inner-spin-button {
+.filters__label--range .filters__input::-webkit-inner-spin-button {
   appearance: none;
 }
 
-.filters__label--type--checkbox:hover,
-.filters__label--type--radio:hover {
+.filters__label--checkbox:hover,
+.filters__label--radio:hover {
   filter: opacity(60%);
 }
 
-.filters__label--type--checkbox:active,
-.filters__label--type--radio:active,
-/* .filters__label--type--checkbox:active .filters__input,
-.filters__label--type--radio:active .filters__input, */
-.filters__label--type--checkbox:has(.filters__input:active),
-.filters__label--type--radio:has(.filters__input:active) {
+.filters__label--checkbox:active,
+.filters__label--radio:active,
+.filters__label--checkbox:has(.filters__input:active),
+.filters__label--radio:has(.filters__input:active) {
   filter: opacity(30%);
 }
 
-.filters__label--type--checkbox:has(.filters__input:disabled),
-.filters__label--type--radio:has(.filters__input:disabled) {
+.filters__label--checkbox:has(.filters__input:disabled),
+.filters__label--radio:has(.filters__input:disabled) {
   filter: opacity(15%);
   pointer-events: none;
 }
 
-.filters__label--type--range:hover .filters__input {
+.filters__label--range:hover .filters__input {
   background-color: var(--color-border);
 }
 
