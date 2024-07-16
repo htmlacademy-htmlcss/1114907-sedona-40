@@ -280,6 +280,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   list-style-type: none;
+  text-transform: capitalize;
 }
 
 .menu {
@@ -372,9 +373,10 @@ body {
 }
 
 .hotels-quantity {
-  width: 20px;
+  min-width: 20px;
   height: 20px;
-  border-radius: 50%;
+  padding: 0 3px;
+  border-radius: 100vw;
   color: var(--color-on-surface);
   background-color: var(--color-success);
   display: flex;
