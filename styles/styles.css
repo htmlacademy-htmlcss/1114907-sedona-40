@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "PT Serif";
+  font-family: "PT Sans";
   src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "PT Serif";
+  font-family: "PT Sans";
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -112,7 +112,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "PT Serif", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: var(--text-basic-font-size);
   line-height: var(--text-basic-line-height);
   color: var(--color-secondary);
@@ -135,6 +135,7 @@ body {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: var(--button-border-radius);
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -145,7 +146,7 @@ body {
   --button-font-size: 20px;
   --button-line-height: 36px;
 
-  padding: 7px 50px;
+  padding: 7px 49px;
 }
 
 .button--regular {
@@ -646,7 +647,7 @@ body {
 .subscribe__text {
   max-width: var(--container-inner);
   margin: 0 auto;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 }
 
 .subscribe__form {
@@ -671,7 +672,12 @@ body {
   padding: 14px 20px;
 }
 
-.subscribe__input::placeholder {
+.subscribe__input:hover,
+.subscribe__input:focus-visible {
+  background-color: var(--color-border);
+}
+
+.subscribe__input::placeholder-shown {
   filter: opacity(60%);
 }
 
@@ -843,6 +849,7 @@ body {
 .filters__label-inner {
   position: absolute;
   right: 0;
+  margin-top: 1px;
   padding: 12px 20px;
   color: var(--color-primary-30);
   font-size: var(--input-font-size);
@@ -857,7 +864,8 @@ body {
   width: 20px;
   height: 20px;
   margin: 0;
-  margin-top: 2px;
+  margin-top: 1px;
+  font-family: inherit;
   border-radius: var(--button-border-radius);
   background-color: var(--color-background-1);
 }
@@ -878,6 +886,7 @@ body {
   width: 20px;
   height: 20px;
   mask-image: url("../images/icons/icon-control-checkbox.svg");
+  mask-position: center 1px;
 }
 
 .filters__input[type="radio"]:checked::after {
@@ -890,7 +899,7 @@ body {
   display: block;
   width: 100%;
   height: max-content;
-  padding: 12px 50px 12px 21px;
+  padding: 13px 50px 11px 20px;
   font-weight: 700;
   margin-top: 0;
   font-size: var(--input-font-size);
@@ -1034,6 +1043,7 @@ body {
 .catalog__view-button-group {
   display: flex;
   gap: 8px;
+  margin-bottom: 1px;
 }
 
 .catalog__view-button {
@@ -1497,6 +1507,9 @@ body {
   font-size: 18px;
   border: 0;
   background-color: var(--color-background-2);
+  background-image: url("../images/icons/icon-date.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   border-radius: var(--button-border-radius);
 }
 
@@ -1607,10 +1620,14 @@ body {
 }
 
 .booking-form__submit {
+  --button-line-height: 24px;
   grid-column: 1 / -1;
+  padding: 17px 49px;
+  border-radius: 10px;
 }
 
 .tooltip {
+  font-family: inherit;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1641,9 +1658,10 @@ body {
   left: 50%;
   display: none;
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 23px 22px;
   transform: translateX(-50%);
   font-size: 16px;
+  line-height: 20px;
   color: #fff;
   background-color: #333;
   border-radius: 10px;
