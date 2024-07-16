@@ -191,13 +191,13 @@
           <form class="modal__form booking-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="booking-form__date">
               <label class="booking-form__date-label" for="arrival">Дата заезда:</label>
-              <input class="booking-form__date-input" id="arrival" name="arrival-date" type="text" placeholder="27 июня 2023" value="27 апреля 2020">
+              <input class="booking-form__date-input" id="arrival" name="arrival-date" type="text" placeholder="27 июня 2023" value="27 апреля 2020" required>
               <p class="booking-form__message booking-form__message--error">Мы не можем отправить вас в прошлое.</p>
             </div>
 
             <div class="booking-form__date">
               <label class="booking-form__date-label" for="departure">Дата выезда:</label>
-              <input class="booking-form__date-input" id="departure" name="departure-date" type="text" placeholder="1 сентября 2023" value="1 сентября 2023">
+              <input class="booking-form__date-input" id="departure" name="departure-date" type="text" placeholder="1 сентября 2023" value="1 сентября 2023" required>
               <p class="booking-form__message">На эти даты есть свободные номера. Пока есть.</p>
             </div>
 
@@ -208,7 +208,7 @@
                 <button class="booking-form__visitors-button booking-form__visitors-button--remove" type="button">
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
-                <input class="booking-form__visitors-input" id="adult" name="number-of-adult" type="number" placeholder="2" value="2">
+                <input class="booking-form__visitors-input" id="adult" name="number-of-adult" type="number" placeholder="2" value="2" required>
                 <button class="booking-form__visitors-button booking-form__visitors-button--add" type="button">
                   <span class="visually-hidden">Прибавить количество</span>
                 </button>
@@ -227,7 +227,7 @@
                 <button class="booking-form__visitors-button booking-form__visitors-button--remove" type="button">
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
-                <input class="booking-form__visitors-input" id="children" name="number-of-children" type="number" placeholder="2" value="2">
+                <input class="booking-form__visitors-input" id="children" name="number-of-children" type="number" placeholder="2" value="2" required>
                 <button class="booking-form__visitors-button booking-form__visitors-button--add" type="button">
                   <span class="visually-hidden">Прибавить количество</span>
                 </button>
