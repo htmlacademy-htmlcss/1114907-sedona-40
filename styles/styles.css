@@ -1562,9 +1562,6 @@ body {
   border-radius: var(--button-border-radius);
 }
 
-.booking-form__visitors-label {
-}
-
 .booking-form__visitors-button {
   justify-self: center;
   align-items: center;
@@ -1625,9 +1622,6 @@ body {
   background-color: var(--color-border);
 }
 
-.booking-form__visitors-tooltip {
-}
-
 .booking-form__submit {
   --button-line-height: 24px;
   grid-column: 1 / -1;
@@ -1647,6 +1641,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 0;
   background-color: var(--color-accent-2);
   border: 0;
   border-radius: 50%;
