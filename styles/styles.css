@@ -400,7 +400,7 @@ body {
   min-height: 485px;
   padding: 51px 0 82px;
   color: var(--color-on-surface);
-  background-color: var(--color-surface-20);
+  background-color: #afd6ef;
   background-image: url("../images/divider.svg"), url("../images/background-home.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, cover;
