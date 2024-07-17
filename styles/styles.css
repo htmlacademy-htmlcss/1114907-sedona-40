@@ -618,6 +618,7 @@ body {
 
 .hotel-search__button {
   max-width: var(--container-inner);
+  min-width: 376px;
   margin: 0 auto;
 }
 
@@ -682,6 +683,7 @@ body {
 }
 
 .subscribe__button {
+  flex-grow: 1;
   border-radius: 0 4px 4px 0;
 }
 
