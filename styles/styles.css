@@ -220,7 +220,7 @@ body {
 .cover {
   padding: 35px var(--page-x-indent) 70px;
   color: var(--color-on-surface);
-  background-color: var(--color-surface-20);
+  background-color: #afd6ef;
   background-image: url("../images/background-catalog.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -634,7 +634,7 @@ body {
 
 .subscribe--on-surface {
   color: var(--color-on-surface);
-  background-color: var(--color-surface-20);
+  background-color: #afd6ef;
   background-image: url("../images/background-subscribe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
