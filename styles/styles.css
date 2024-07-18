@@ -1627,6 +1627,11 @@ body {
   border-radius: 50%;
 }
 
+.tooltip__toggle:hover,
+.tooltip__toggle:focus-visible {
+  background-color: var(--color-accent-hover-2);
+}
+
 .tooltip__toggle::before {
   content: "";
   display: block;
