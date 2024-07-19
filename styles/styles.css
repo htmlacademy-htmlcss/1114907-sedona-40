@@ -1014,6 +1014,7 @@ body {
 
 .filters__button {
   width: 191px;
+  word-break: break-word;
 }
 
 .filters__button:not(:last-child) {
