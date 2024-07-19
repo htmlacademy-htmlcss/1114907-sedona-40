@@ -673,7 +673,17 @@ body {
 }
 
 .subscribe__input::placeholder {
+  color: var(--color-primary);
   filter: opacity(60%);
+}
+
+.subscribe__input:disabled {
+  color: var(--color-shadow-30);
+  background-color: var(--color-border);
+}
+
+.subscribe__input:disabled::placeholder {
+  color: var(--color-shadow-30);
 }
 
 .subscribe__button {
@@ -926,14 +936,24 @@ body {
   filter: opacity(30%);
 }
 
-.filters__label--checkbox:has(.filters__input:disabled),
-.filters__label--radio:has(.filters__input:disabled) {
+.filters__label--checkbox:has(:disabled),
+.filters__label--radio:has(:disabled) {
   filter: opacity(15%);
   pointer-events: none;
 }
 
 .filters__label--range:hover .filters__input {
   background-color: var(--color-border);
+}
+
+.filters__label--range .filters__input:disabled {
+  color: var(--color-shadow-30);
+  background-color: var(--color-border);
+  cursor: default;
+}
+
+.filters__label--range .filters__input:disabled::placeholder {
+  color: var(--color-shadow-30);
 }
 
 .filters__range-slider {
@@ -983,6 +1003,11 @@ body {
   outline: 3px solid var(--color-accent-2);
 }
 
+.filters__range-handler:disabled {
+  background-color: #a7a7a7;
+  pointer-events: none;
+}
+
 .filters__button-group {
   padding-top: 56px;
 }
@@ -991,7 +1016,7 @@ body {
   width: 191px;
 }
 
-.filters__button:first-child {
+.filters__button:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -1449,6 +1474,14 @@ body {
   filter: opacity(30%);
 }
 
+.modal__close-button:disabled {
+  pointer-events: none;
+}
+
+.modal__close-button:disabled::before {
+  filter: opacity(30%);
+}
+
 .modal__title {
   margin: 0;
   margin-bottom: 64px;
@@ -1499,6 +1532,15 @@ body {
   background-color: var(--color-border);
 }
 
+.booking-form__date-input:disabled {
+  color: var(--color-shadow-30);
+  background-color: var(--color-border);
+}
+
+.booking-form__date-input:disabled::placeholder {
+  color: var(--color-shadow-30);
+}
+
 .booking-form__message {
   grid-column: 2 / -1;
   margin: 0;
@@ -1533,6 +1575,11 @@ body {
   margin: 0;
   background-color: var(--color-background-2);
   border-radius: var(--button-border-radius);
+}
+
+.booking-form__visitors-count:has(:disabled) {
+  background-color: var(--color-border);
+  pointer-events: none;
 }
 
 .booking-form__visitors-button {
@@ -1580,6 +1627,11 @@ body {
   filter: opacity(20%);
 }
 
+.booking-form__visitors-button:disabled::before,
+.booking-form__visitors-button:disabled::after {
+  background-color: var(--color-shadow-30);
+}
+
 .booking-form__visitors-input {
   --input-line-height: 20px;
   text-align: center;
@@ -1601,6 +1653,10 @@ body {
 .booking-form__visitors-input:hover,
 .booking-form__visitors-input:focus-visible {
   background-color: var(--color-border);
+}
+
+.booking-form__visitors-input:disabled {
+  color: var(--color-shadow-30);
 }
 
 .booking-form__submit {
@@ -1634,6 +1690,10 @@ body {
 .tooltip__toggle:hover,
 .tooltip__toggle:focus-visible {
   background-color: var(--color-accent-hover-2);
+}
+
+.tooltip__toggle:disabled {
+  filter: opacity(30%);
 }
 
 .tooltip__toggle::before {
