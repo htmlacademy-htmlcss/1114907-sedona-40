@@ -240,11 +240,11 @@ body {
 
 .navbar__brand-link:hover,
 .navbar__brand-link:focus-visible {
-  filter: opacity(60%);
+  filter: opacity(80%);
 }
 
 .navbar__brand-link:active {
-  filter: opacity(30%);
+  filter: opacity(60%);
 }
 
 .navbar__brand-logo {
@@ -456,13 +456,9 @@ body {
 .block__inner {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
-  height: 100%;
   padding: var(--block-y-indent) var(--block-x-indent);
-}
-
-.advantages__item:not(.block--wide) .block__inner {
-  --block-y-indent: 112px;
 }
 
 .block__title {
