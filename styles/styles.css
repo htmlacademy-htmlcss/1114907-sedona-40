@@ -401,6 +401,9 @@ body {
 }
 
 .advantages__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   max-width: var(--container-inner);
   margin: 0 auto;
   padding: 70px 0 89px;
@@ -408,7 +411,6 @@ body {
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 25px;
   font-size: var(--headline-font-size-2);
   line-height: var(--headline-line-height-2);
   color: var(--color-primary);
@@ -558,6 +560,9 @@ body {
 }
 
 .features__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: var(--container-inner);
   margin: 0 auto;
   padding: 64px 0;
@@ -565,7 +570,6 @@ body {
 
 .features__title {
   margin: 0;
-  margin-bottom: 20px;
   text-transform: uppercase;
   font-size: var(--headline-font-size-2);
   line-height: var(--headline-line-height-2);
