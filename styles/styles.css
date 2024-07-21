@@ -347,7 +347,7 @@ body {
   height: 20px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: 21px 20px;
   background-image: var(--icon);
 }
 
@@ -361,13 +361,14 @@ body {
   min-width: 20px;
   max-width: 40px;
   height: 20px;
-  padding: 0 3px;
+  padding: 2px 3px 1px;
   border-radius: 100vw;
   color: var(--color-on-surface);
   background-color: var(--color-success);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
   font-size: 10px;
   line-height: 10px;
   white-space: nowrap;
@@ -497,18 +498,18 @@ body {
 .block--with-icon .block__inner::before {
   content: "";
   display: block;
-  width: 75px;
+  width: 76px;
   height: 72px;
   margin: 0 auto;
   background-image: var(--icon);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 1px center;
   background-size: var(--icon-size);
 }
 
 .block--icon-housing .block__inner::before {
   --icon: url("../images/icons/icon-housing.svg");
-  --icon-size: 75px 72px;
+  --icon-size: 76px 72px;
 }
 
 .block--icon-eating .block__inner::before {
@@ -520,6 +521,7 @@ body {
   --icon: url("../images/icons/icon-souvenir.svg");
   --icon-size: 65px 76px;
 
+  width: 65px;
   height: 76px;
   margin-top: -2px;
   margin-bottom: -2px;
