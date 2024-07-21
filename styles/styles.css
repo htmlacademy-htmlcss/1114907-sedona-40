@@ -1154,6 +1154,15 @@ body {
   text-decoration: none;
 }
 
+.card__link:hover,
+.card__link:focus-visible {
+  filter: opacity(80%);
+}
+
+.card__link:active {
+  filter: opacity(60%);
+}
+
 .card__image {
   display: block;
   width: 100%;
