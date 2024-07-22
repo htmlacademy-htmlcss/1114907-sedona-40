@@ -42,7 +42,6 @@
   --color-shadow-25: rgb(0 0 0 / 25%);
   --color-shadow-30: rgb(0 0 0 / 30%);
   --color-shadow-40: rgb(0 0 0 / 40%);
-  --color-pseudo-element: rgb(0 0 0 / 30%);
 
   /* Typography */
   --headline-font-size-1: 60px;
@@ -77,7 +76,7 @@
   --container-inner: 684px;
   --page-min-width: 1200px;
   --page-x-indent: 70px;
-  --block-x-indent: 85px;
+  --block-x-indent: 84px;
   --block-y-indent: 81px;
   --block-width: 400px;
   --block-container: 230px;
@@ -347,7 +346,7 @@ body {
   height: 20px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 21px 20px;
+  background-size: 20px 20px;
   background-image: var(--icon);
 }
 
@@ -407,7 +406,7 @@ body {
   gap: 25px;
   max-width: var(--container-inner);
   margin: 0 auto;
-  padding: 70px 0 89px;
+  padding: 69px 0 90px;
 }
 
 .advantages__title {
@@ -482,25 +481,27 @@ body {
   order: 1;
 }
 
+.block__inner::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+}
+
+.block--with-line .block__inner::before {
+  --color-pseudo-element: var(--color-shadow-30);
+
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-pseudo-element);
+}
+
 .block--on-surface .block__inner::before {
   --color-pseudo-element: var(--color-on-surface-30);
 }
 
-.block--with-line .block__inner::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: var(--color-pseudo-element);
-  margin: 0 auto;
-}
-
 .block--with-icon .block__inner::before {
-  content: "";
-  display: block;
   width: 76px;
   height: 72px;
-  margin: 0 auto;
   background-image: var(--icon);
   background-repeat: no-repeat;
   background-position: left 1px center;
@@ -514,14 +515,14 @@ body {
 
 .block--icon-eating .block__inner::before {
   --icon: url("../images/icons/icon-eating.svg");
-  --icon-size: 75px 70px;
+  --icon-size: 76px 70px;
 }
 
 .block--icon-souvenir .block__inner::before {
   --icon: url("../images/icons/icon-souvenir.svg");
-  --icon-size: 65px 76px;
+  --icon-size: 66px 76px;
 
-  width: 65px;
+  width: 66px;
   height: 76px;
   margin-top: -2px;
   margin-bottom: -2px;
@@ -1523,6 +1524,10 @@ body {
   gap: 4px 10px;
 }
 
+.booking-form__date:has(:disabled) {
+  filter: opacity(30%);
+}
+
 .booking-form__date-label {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
@@ -1578,6 +1583,11 @@ body {
   margin-bottom: 25px;
 }
 
+.booking-form__visitors:has(input:disabled) {
+  filter: opacity(30%);
+  pointer-events: none;
+}
+
 .booking-form__visitors-inner {
   display: flex;
   flex-wrap: wrap;
@@ -1593,9 +1603,8 @@ body {
   border-radius: var(--button-border-radius);
 }
 
-.booking-form__visitors-count:has(:disabled) {
+.booking-form__visitors-count:has(input:disabled) {
   background-color: var(--color-border);
-  pointer-events: none;
 }
 
 .booking-form__visitors-button {
@@ -1641,6 +1650,11 @@ body {
 .booking-form__visitors-button:active::after {
   background-color: var(--color-primary);
   filter: opacity(20%);
+}
+
+.booking-form__visitors-button:disabled {
+  filter: opacity(60%);
+  pointer-events: none;
 }
 
 .booking-form__visitors-button:disabled::before,
